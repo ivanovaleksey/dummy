@@ -4,10 +4,10 @@
 #include "point.h"
 
 struct Circle {
-  struct Point *center;
+  const struct Point *center;
   float radius;
 };
 
-float circle_area(struct Circle *c);
+float circle_area(const struct Circle *c);
 
 #endif
