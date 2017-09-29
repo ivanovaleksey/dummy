@@ -1,7 +1,6 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
-#include <math.h>
 #include "point.h"
 
 struct Circle {
