@@ -1,8 +1,4 @@
-use Circle;
-use Point;
-
-use circle_area;
-use point_info;
+include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 impl Circle {
     pub fn area(&self) -> f32 {
