@@ -1,0 +1,13 @@
+#!/bin/bash
+
+bindgen \
+  --output plugin-bindings.rs \
+  --blacklist-type "__darwin_size_t" \
+  --whitelist-type "janus_.*" \
+  --whitelist-function "janus_.*" \
+  --whitelist-var "(?i:janus_.*)" \
+  /Users/aleksey/projects/github/janus-gateway/plugins/plugin.h \
+  -- \
+  -I /usr/local/include \
+  -I /usr/local/include/glib-2.0 \
+  -I /usr/local/lib/glib-2.0/include

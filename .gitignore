@@ -2,3 +2,4 @@
 **/*.rs.bk
 c/*.o
 c/a.out
+*bindings.rs
