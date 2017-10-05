@@ -11,9 +11,12 @@ impl Point {
         use std::ffi::CString;
 
         unsafe {
-            let string = CString::new("").unwrap();
+            let bytes = vec![0u8; 25];
+            let length = bytes.len() as i32;
+            let string = CString::from_vec_unchecked(bytes);
             let pointer = string.into_raw();
-            point_info(self, pointer);
+
+            point_info(self, pointer, length);
 
             CString::from_raw(pointer).into_string().unwrap()
         }
