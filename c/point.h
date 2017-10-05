@@ -6,6 +6,6 @@ struct Point {
   float y;
 };
 
-void point_info(const struct Point *p, char *str);
+int point_info(const struct Point *p, char *str, int size);
 
 #endif

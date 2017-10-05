@@ -15,15 +15,12 @@ int main() {
     .radius = 2
   };
 
-  char *str;
-  str = (char *) malloc(100);
+  char str[25];
 
-  point_info(&p, str);
+  point_info(&p, str, sizeof(str));
   printf("%s\n", str);
 
   printf("Circle's area = %f\n", circle_area(&c));
-
-  free(str);
 
   return 0;
 }
